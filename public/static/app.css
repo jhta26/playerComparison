@@ -1,0 +1,78 @@
+body{
+	text-align:center;
+	background: url('http://images.performgroup.com/di/library/omnisport/ba/f0/basketball-court-12216-usnews-getty-ftr_13o43lfeb1p481h6z0a68bllao.jpg?t=1786488258');
+}
+#mainHeader{
+	font-family: arial;
+	background-color: black;
+	color:white;
+	border-style: dashed;
+	border-width: 3px;
+	border-color:white;
+	margin:0 auto;
+	padding:7px;
+	text-shadow:2px 2px gray;
+	width:40%;
+}
+.button{
+	width:100px;
+	height:30px;
+}
+
+#contain{
+	margin:0 auto;
+	border-width: 1px;
+	border-color: blue;
+	text-align: center;
+	display:flex;
+	justify-content: center;
+	padding:10px;
+}
+.cardHead{
+	font-family:futura;
+	color:white;
+	background-color:black;
+	border:3px solid lightblue;
+	border-radius: 8%;
+	
+}
+
+#div3{
+	float:left;
+	width:30%;
+
+}
+#div4{
+	float:left;
+	width:30%;
+}
+#div5{
+	float:left;
+	width:30%;
+	
+}
+.searchField{
+	color:white;
+
+}
+img{
+	border-radius: 50%;
+}
+table{
+	background-color:black;
+	
+	font-family:arial;
+	border:3px solid lightblue;
+	text-align: center;
+	border-radius: 8%;
+
+}
+td,th{
+	padding:5px 8px 8px 8px;
+	color:white;
+	text-align: left;
+}
+tr.even {
+	background-color: gray;
+	color:white;
+}
