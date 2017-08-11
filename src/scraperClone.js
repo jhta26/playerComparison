@@ -1,23 +1,45 @@
-let domParser = new DOMParser();
+domParser = new DOMParser();
 
 class BasketballReferenceScraper{
-  
+  constructor(input) {
+    this.input = input;
+  }
   scrape(url) {
+    var firstLetterLast = this.input.split(' ')[1][0].toLowerCase();
+    var searchName =
+      this.input.split(' ')[1].substr(0, 5).toLowerCase() +
+      this.input.split(' ')[0].substr(0, 2).toLowerCase();
 
-        return fetch(url)
+    var myInit = { headers: { origin: null } };
+    return fetch(url + firstLetterLast, myInit)
+      .then(response => response.text())
+      .then(text => {
+        let doc = domParser.parseFromString(text, 'text/html');
+
+        let $tbody = doc.getElementsByTagName('tbody')[0];
+        var array = [];
+        let $trs = $tbody.children;
+
+        for (let i = 0; i < $trs.length; i++) {
+          if ($trs[i].children[0].children[0].href == undefined) {
+            array.push($trs[i].children[0].children[0].children[0].href);
+          } else {
+            array.push($trs[i].children[0].children[0].href);
+          }
+        }
+
+        return array.filter(a => a.includes(searchName))[0];
+      })
+      .then(text => {
+        console.log(text);
+
+        return fetch(url + firstLetterLast + `/${text.substr(32)}`, myInit)
           .then(response => response.text())
           .then(text => {
             return domParser.parseFromString(text, 'text/html');
           })
           .then(doc2 => {
-            
-             var playerObject = {}
-            if(typeof playerObject.points17=='string'){
-              playerObject = {}
-            }
-           
-           
-            ;
+            var playerObject = {};
             (playerObject.photo = doc2.getElementsByClassName(
               'media-item'
             )[0].children[0].src), (playerObject.name = doc2.getElementsByTagName(
@@ -40,13 +62,12 @@ class BasketballReferenceScraper{
             )[0].children[2].children[2].innerText), (playerObject.assistsCar = doc2.getElementsByClassName(
               'p1'
             )[0].children[3].children[2].innerText);
-          
-            
+            console.log(playerObject.name);
             return playerObject;
           })
           .catch(err => err);
-        
-      };
+        // }
+      });
   }
-
+}
 module.exports=BasketballReferenceScraper

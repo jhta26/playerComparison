@@ -1,6 +1,7 @@
 body{
 	text-align:center;
-	background: url('http://images.performgroup.com/di/library/omnisport/ba/f0/basketball-court-12216-usnews-getty-ftr_13o43lfeb1p481h6z0a68bllao.jpg?t=1786488258');
+	background:url('http://www.baltana.com/files/wallpapers-2/Basketball-Background-Wallpaper-06644.jpg');
+
 }
 #mainHeader{
 	font-family: arial;
@@ -21,37 +22,45 @@ body{
 
 #contain{
 	margin:0 auto;
-	border-width: 1px;
-	border-color: blue;
+	border-bottom: 3px solid teal;
 	text-align: center;
 	display:flex;
 	justify-content: center;
+	background-color: black;
 	padding:10px;
+}
+
+#contain2{
+	margin:0 auto;
+	text-align: center;
+	display: flex;
+	justify-content:center;
+	padding: 30px;
+
 }
 .cardHead{
 	font-family:futura;
 	color:white;
 	background-color:black;
-	border:3px solid lightblue;
-	border-radius: 8%;
+	text-align: left;
+	border-radius: 15%;
+	margin:0 auto;
 	
 }
 
 #div3{
 	float:left;
-	width:30%;
+	width:32%;
+		
 
 }
-#div4{
-	float:left;
-	width:30%;
-}
-#div5{
-	float:left;
-	width:30%;
-	
-}
+
 .searchField{
+	color:white;
+}
+.input1and2{
+
+	text-align: center;
 	color:white;
 
 }
@@ -60,19 +69,108 @@ img{
 }
 table{
 	background-color:black;
-	
 	font-family:arial;
-	border:3px solid lightblue;
 	text-align: center;
-	border-radius: 8%;
-
+	border-radius: 15%;
+	padding:0px;
+	overflow:auto;
+}
+.boldHead{
+	color:lightgray;
+	font-weight: bold;
 }
 td,th{
-	padding:5px 8px 8px 8px;
+	
 	color:white;
-	text-align: left;
+	text-align: center;
+	overflow:auto;
+	font-size:14px;
 }
-tr.even {
-	background-color: gray;
+
+.headImg{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:4px;
+}
+
+.masterDiv{
+	display:flex;
+	justify-content: space-between;
+	flex-direction: row;
+	border-bottom: 10px solid teal;
+	height:120px;
+	margin-bottom: 3px;
+	
+}
+.masterDiv2{
+		display:flex;
+	justify-content: space-between;
+	flex-direction: row;
+	
+	height:120px;
+	margin-top: 3px;
+}
+#div1{
+	margin:0 auto;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+}
+
+
+/*the middle comparison*/
+.compareInfo{
 	color:white;
+	font-family: futura;
+	font-size: 20px;
+	padding:4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow: auto;
+	
+}
+.playerCards{
+	background-color: black;
+	border:4px solid teal;
+	border-radius: 5%;
+	display:flex;
+	flex-direction: column;
+	padding:1px;
+	flex-wrap: wrap;
+	overflow:auto;
+	justify-content: center;
+	align-items: center;
+	height:500px;
+	text-align: center;
+	
+}
+#divActualButton{
+	width:300px;
+	height:40px;
+	color:white;
+
+	background-color:teal;
+	border: 3px solid white;
+	border-radius: 10%;
+
+}
+.button1and2{
+	background-color: teal;
+	color:white;
+	border: 2px solid white;
+	border-radius: 10%;
+
+}
+.tableHead{
+	color:gray;
+	border-top: 1px solid gray;
+
 }
