@@ -21,7 +21,7 @@ const div1 = div({ class: 'col s12 m6', id: 'div1' });
 const div2 = div({ class: 'col s12 m6', id: 'div1' });
 const div3 = div({ class: 'col s12 m6', id: 'div3' });
 const div4 = div({ class: 'col s12 m6', id: 'div3' });
-const div5 = div({ class: 'col  s12 m6', id: 'div3' });
+const div5 = div({ class: 'col s12 m6', id: 'div3' });
 var input1 = input({
   class: 'searchField input1and2',
   type: 'text',
@@ -38,7 +38,7 @@ masterDiv2.appendChild(div3);
 masterDiv2.appendChild(div4);
 masterDiv2.appendChild(div5);
 
-const divButton = div({ class: 'col  s12 m6', id: 'div1' });
+const divButton = div({ class: 'col s12 m6', id: 'div1' });
 const divButtonButton = button(
   { class: 'button', value: 'compare', id: 'divActualButton' },
   'Click Here to Compare'
