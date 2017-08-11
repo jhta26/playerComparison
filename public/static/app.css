@@ -3,41 +3,32 @@ body{
 	background:url('http://www.baltana.com/files/wallpapers-2/Basketball-Background-Wallpaper-06644.jpg');
 
 }
-#mainHeader{
-	font-family: arial;
-	background-color: black;
-	color:white;
-	border-style: dashed;
-	border-width: 3px;
-	border-color:white;
-	margin:0 auto;
-	padding:7px;
-	text-shadow:2px 2px gray;
-	width:40%;
-}
+
 .button{
 	width:100px;
 	height:30px;
 }
-
-#contain{
-	margin:0 auto;
-	border-bottom: 3px solid teal;
-	text-align: center;
+.masterDiv{
 	display:flex;
-	justify-content: center;
+	justify-content: space-between;
+	flex-direction: row;
+	border-bottom: 3px solid teal;
+	height:120px;
+	margin-bottom: 10px;
 	background-color: black;
-	padding:10px;
+	
+}
+.masterDiv2{
+	display:flex;
+	justify-content: space-between;
+	flex-direction: row;
+	height:120px;
+	margin-top: 25px;
 }
 
-#contain2{
-	margin:0 auto;
-	text-align: center;
-	display: flex;
-	justify-content:center;
-	padding: 30px;
 
-}
+
+
 .cardHead{
 	font-family:futura;
 	color:white;
@@ -50,7 +41,10 @@ body{
 
 #div3{
 	float:left;
-	width:32%;
+	width:32.5%;
+	display:flex;
+	justify-content: center
+	margin: 0 auto;
 		
 
 }
@@ -94,23 +88,7 @@ td,th{
 	padding:4px;
 }
 
-.masterDiv{
-	display:flex;
-	justify-content: space-between;
-	flex-direction: row;
-	border-bottom: 10px solid teal;
-	height:120px;
-	margin-bottom: 3px;
-	
-}
-.masterDiv2{
-		display:flex;
-	justify-content: space-between;
-	flex-direction: row;
-	
-	height:120px;
-	margin-top: 3px;
-}
+
 #div1{
 	margin:0 auto;
 	text-align: center;
