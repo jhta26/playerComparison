@@ -271,7 +271,12 @@ p({class:'compareInfo'}, `${assistsString}`),
   )
 
 currentdiv3=compareDiv
-div4.appendChild(compareDiv)
+var time =setInterval(() => {
+  div4.appendChild(compareDiv)
+ clearInterval(time)
+}, 2000);
+
+
   }
        
       })
