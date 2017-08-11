@@ -13,7 +13,7 @@ const {
   thead
 } = require('elementx');
 
-var BasketballReferenceScraper = require('./scraper.js');
+var BasketballReferenceScraper = require('./scraperClone.js');
 
 const masterDiv = div({ class: 'row m6 masterDiv', id: 'contain' });
 const masterDiv2 = div({ class: 'row m6 masterDiv2', id: 'contain2' });
@@ -68,14 +68,15 @@ divButtonButton.addEventListener('click', event => {
     alert('Type a Name');
   }
   if (input1.value.length > 0 && input2.value.length > 0) {
-    var obj = new BasketballReferenceScraper();
+    var obj = new BasketballReferenceScraper(input1.value);
     obj.scrape(input1.value);
-    var obj2 = new BasketballReferenceScraper();
+    var obj2 = new BasketballReferenceScraper(input2.value);
 
     Promise.all([
-      obj.scrape(input1.value),
-      obj2.scrape(input2.value)
+      obj.scrape(`http://cors-bypass-proxy.axiomlogic.com/https://www.basketball-reference.com/players/`),
+      obj2.scrape(`http://cors-bypass-proxy.axiomlogic.com/https://www.basketball-reference.com/players/`)
     ]).then(info => {
+      console.log(info[0])
       var info1 = info[0];
       var info2 = info[1];
       if (currentdiv) {
