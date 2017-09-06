@@ -31,14 +31,16 @@ class BasketballReferenceScraper{
         return array.filter(a => a.includes(searchName))[0];
       })
       .then(text => {
-        console.log(text);
+        
+        let strPlace = text.indexOf(searchName)
 
-        return fetch(url + firstLetterLast + `/${text.substr(32)}`, myInit)
+        return fetch(url + firstLetterLast + `/${text.substr(strPlace)}`, myInit)
           .then(response => response.text())
           .then(text => {
             return domParser.parseFromString(text, 'text/html');
           })
           .then(doc2 => {
+            console.log(doc2)
             var playerObject = {};
             (playerObject.photo = doc2.getElementsByClassName(
               'media-item'

@@ -15,13 +15,13 @@ const {
 
 var BasketballReferenceScraper = require('./scraperClone.js');
 
-const masterDiv = div({ class: 'row m6 masterDiv', id: 'contain' });
-const masterDiv2 = div({ class: 'row m6 masterDiv2', id: 'contain2' });
-const div1 = div({ class: 'col s12 m6', id: 'div1' });
-const div2 = div({ class: 'col s12 m6', id: 'div1' });
-const div3 = div({ class: 'col s12 m6', id: 'div3' });
-const div4 = div({ class: 'col s12 m6', id: 'div3' });
-const div5 = div({ class: 'col s12 m6', id: 'div3' });
+const masterDiv = div({ class: 'row s12 m6 masterDiv', id: 'contain' });
+const masterDiv2 = div({ class: 'row s12 m6 masterDiv2', id: 'contain2' });
+const div1 = div({ class: 'col s12 m4', id: 'div1' });
+const div2 = div({ class: 'col s12 m4', id: 'div1' });
+const div3 = div({ class: 'col s12 m4', id: 'div3' });
+const div4 = div({ class: 'col s12 m4', id: 'div3' });
+const div5 = div({ class: 'col s12 m4', id: 'div3' });
 var input1 = input({
   class: 'searchField input1and2',
   type: 'text',
@@ -38,7 +38,7 @@ masterDiv2.appendChild(div3);
 masterDiv2.appendChild(div4);
 masterDiv2.appendChild(div5);
 
-const divButton = div({ class: 'col s12 m6', id: 'div1' });
+const divButton = div({ class: 'col s12 m4', id: 'div1' });
 const divButtonButton = button(
   { class: 'button', value: 'compare', id: 'divActualButton' },
   'Click Here to Compare'
@@ -92,10 +92,9 @@ divButtonButton.addEventListener('click', event => {
       while (playerArray2.length !== 0) {
         playerArray2.pop();
       }
-      console.log(info1);
-      console.log(info2);
+      
       var card1 = div(
-        { class: 'playerCards col s12' },
+        { class: 'playerCards col s12 m12' },
         div(
           { class: 'headImg' },
           h4({ class: 'cardHead' }, `${info1['name']}`),
@@ -142,7 +141,7 @@ divButtonButton.addEventListener('click', event => {
         )
       );
       var card2 = div(
-        { class: 'playerCards col s12' },
+        { class: 'playerCards col s12 m12' },
         div(
           { class: 'headImg' },
           h4({ class: 'cardHead' }, `${info2['name']}`),
@@ -260,10 +259,9 @@ divButtonButton.addEventListener('click', event => {
         );
 
         currentdiv3 = compareDiv;
-        var time = setInterval(() => {
+        
           div4.appendChild(compareDiv);
-          clearInterval(time);
-        }, 2000);
+        
       }
     });
   }

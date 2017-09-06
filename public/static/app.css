@@ -1,6 +1,6 @@
 body{
 	text-align:center;
-	background:url('http://www.baltana.com/files/wallpapers-2/Basketball-Background-Wallpaper-06644.jpg');
+	background:url('/sources/Basketball-Background-Wallpaper-06644.jpg');
 
 }
 
@@ -9,20 +9,14 @@ body{
 	height:30px;
 }
 .masterDiv{
-	display:flex;
-	justify-content: space-between;
-	flex-direction: row;
+
 	border-bottom: 3px solid teal;
-	height:120px;
 	margin-bottom: 10px;
 	background-color: black;
 	
 }
 .masterDiv2{
-	display:flex;
-	justify-content: space-between;
-	flex-direction: row;
-	height:120px;
+	
 	margin-top: 25px;
 }
 
@@ -49,11 +43,12 @@ body{
 	margin-top: 5px;
 	margin-bottom: 5px;
 
+
 }
 #div3{
 	float:left;
 	display:flex;
-	justify-content: center
+	justify-content: center;
 	margin: 0 auto;
 		
 
@@ -118,15 +113,15 @@ td,th{
 	background-color: black;
 	border:4px solid teal;
 	border-radius: 5%;
-	display:flex;
-	flex-direction: column;
+	/*display:flex;*/
+	/*flex-direction: column;*/
 	padding:1px;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 	overflow:auto;
-	justify-content: center;
-	align-items: center;
-	height:500px;
-	text-align: center;
+	/*justify-content: center;
+	align-items: center;*/
+	/*height:500px;*/
+	/*text-align: center;*/
 	
 }
 #divActualButton{
