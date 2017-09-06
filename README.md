@@ -10,4 +10,4 @@ To-do List
 -Compare players in different sports
 -Head to Head Stats
 
-![screenshot](./README/screenShotpng?raw=true)
+![screenshot](./screenShot.png?raw=true)
