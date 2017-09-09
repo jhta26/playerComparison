@@ -22,6 +22,7 @@ const div2 = div({ class: 'col s12 m4', id: 'div1' });
 const div3 = div({ class: 'col s12 m4', id: 'div3' });
 const div4 = div({ class: 'col s12 m4', id: 'div3' });
 const div5 = div({ class: 'col s12 m4', id: 'div3' });
+const loader = div({ class: 'loader', id: 'loader' });
 var input1 = input({
   class: 'searchField input1and2',
   type: 'text',
@@ -48,6 +49,7 @@ $body = document.getElementsByTagName('body')[0];
 
 div1.appendChild(input1);
 div2.appendChild(input2);
+div1.appendChild(loader)
 divButton.appendChild(divButtonButton);
 masterDiv.appendChild(div1);
 masterDiv.appendChild(divButton);
@@ -68,6 +70,8 @@ divButtonButton.addEventListener('click', event => {
     alert('Type a Name');
   }
   if (input1.value.length > 0 && input2.value.length > 0) {
+    div3.appendChild(loader)
+    div5.appendChild(loader)
     var obj = new BasketballReferenceScraper(input1.value);
     obj.scrape(input1.value);
     var obj2 = new BasketballReferenceScraper(input2.value);
@@ -76,7 +80,6 @@ divButtonButton.addEventListener('click', event => {
       obj.scrape(`http://cors-bypass-proxy.axiomlogic.com/https://www.basketball-reference.com/players/`),
       obj2.scrape(`http://cors-bypass-proxy.axiomlogic.com/https://www.basketball-reference.com/players/`)
     ]).then(info => {
-      console.log(info[0])
       var info1 = info[0];
       var info2 = info[1];
       if (currentdiv) {
@@ -211,8 +214,8 @@ divButtonButton.addEventListener('click', event => {
 
       currentdiv = card1;
       currentdiv2 = card2;
-
-      console.log(playerArray1);
+      div3.removeChild(div3.childNodes[0])
+      div5.removeChild(div3.childNodes[0])
       div3.appendChild(card1);
       div5.appendChild(card2);
 
